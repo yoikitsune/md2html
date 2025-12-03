@@ -1,0 +1,2700 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation du projet Yinshi (vue via md2html)">
+      
+      
+      
+      
+        <link rel="prev" href="../BACKLOG_STRIPE/">
+      
+      
+        <link rel="next" href="../GESTION_AVANCEE_STRIPE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Checklist Sécurité - Stripe & Authentification - Yinshi Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#checklist-securite-stripe-authentification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Yinshi Documentation" class="md-header__button md-logo" aria-label="Yinshi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yinshi Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Checklist Sécurité - Stripe &amp; Authentification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yinshi Documentation" class="md-nav__button md-logo" aria-label="Yinshi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yinshi Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Yinshi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ARCHITECTURE_AUTH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture d'Authentification - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIAGNOSTIC_WORKFLOW_APPLE_BUILD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 Rapport Diagnostic Complet - Workflow Apple Build (Run #18686872188)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EMAIL_CONFIGURATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration des Emails - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IMPLEMENTATION_VERIFICATION_EMAIL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implémentation de la Vérification d'Email
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MULTIPLATFORM_COMPATIBILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌐 Compatibilité Multi-Plateforme - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OFFICIAL_RECOMMENDATIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Recommandations Officielles Flutter &amp; Firebase - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PERTE_COMPATIBILITE_ANDROID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perte de Compatibilité Android - Analyse et Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PROBLEME_FIRESTORE_EXPLICATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 Problème Firestore - Explication Complète
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROUTE_PROTECTION_EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔐 Évaluation de la Protection des Routes - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SETUP_GITHUB_ACTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Configuration GitHub Actions - Guide rapide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TESTING_PROCEDURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Procédure de Test - Vérification d'Email
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VERSIONING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Guide de Versioning - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_sidebar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+     sidebar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide_roles_utilisateurs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide des Rôles Utilisateurs - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web-deployment-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suivi déploiement web (GitHub Actions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google conundrum
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Google conundrum
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google_conundrum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dossier docs/google_conundrum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google_conundrum/GOOGLE_PLAY_FEEDBACK_AND_VISIBILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comment Google voit les tests et les retours utilisateurs (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google_conundrum/GOOGLE_PLAY_PRODUCTION_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist – Accès à la production Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google_conundrum/GOOGLE_PLAY_PRODUCTION_RAPPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rapport – Problème d’accès à la production Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google_conundrum/GOOGLE_PLAY_PRODUCTION_STRATEGIE_AGILE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stratégie agile – Accès à la production Google Play pour Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google_conundrum/GOOGLE_PLAY_TESTERS_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide testeurs – Campagne de test fermé Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google_conundrum/GOOGLE_PLAY_TESTERS_INVITATION_TEMPLATES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates de messages d’invitation – Test fermé Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google_conundrum/GOOGLE_PLAY_TEST_TRACKING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suivi de la campagne de test fermé – Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pwa ameliore
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pwa ameliore
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pwa_ameliore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PWA Yin Shi – Mise à jour fiabilisée &amp; site de test DreamHost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stripe compliance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stripe compliance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Stripe - Design Technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUDIT_CONFORMITE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit de Conformité Stripe - Yinshi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BACKLOG_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog Stripe - Gestion des Abonnements &amp; Authentification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist Sécurité - Stripe &amp; Authentification
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist Sécurité - Stripe &amp; Authentification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guide-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Guide d'Utilisation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-owasp-top-10-vulnerabilites-web-courantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. OWASP Top 10 - Vulnérabilités Web Courantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. OWASP Top 10 - Vulnérabilités Web Courantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-a012021-broken-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 A01:2021 – Broken Access Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-a022021-cryptographic-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 A02:2021 – Cryptographic Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-a032021-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 A03:2021 – Injection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-a042021-insecure-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 A04:2021 – Insecure Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-a052021-security-misconfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 A05:2021 – Security Misconfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-a062021-vulnerable-and-outdated-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 A06:2021 – Vulnerable and Outdated Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-a072021-identification-and-authentication-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 A07:2021 – Identification and Authentication Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-a082021-software-and-data-integrity-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 A08:2021 – Software and Data Integrity Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-a092021-logging-and-monitoring-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 A09:2021 – Logging and Monitoring Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-a102021-server-side-request-forgery-ssrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 A10:2021 – Server-Side Request Forgery (SSRF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-stripe-security-bonnes-pratiques-specifiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Stripe Security - Bonnes Pratiques Spécifiques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Stripe Security - Bonnes Pratiques Spécifiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-gestion-des-cles-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Gestion des Clés API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-webhooks-stripe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Webhooks Stripe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-paiements-securises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Paiements Sécurisés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-abonnements-securises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Abonnements Sécurisés
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-firebase-security-bonnes-pratiques-specifiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Firebase Security - Bonnes Pratiques Spécifiques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Firebase Security - Bonnes Pratiques Spécifiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-firestore-security-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Firestore Security Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-firebase-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Firebase Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-cloud-functions-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Cloud Functions Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resume-des-priorites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Résumé des Priorités
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Résumé des Priorités">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critique-a-faire-avant-tout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Critique (À faire avant tout)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haute-priorite-a-faire-avant-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟠 Haute Priorité (À faire avant production)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moyenne-priorite-a-faire-avant-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 Moyenne Priorité (À faire avant expansion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ressources-officielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ressources Officielles
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GESTION_AVANCEE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion Avancée Stripe - Guide Complet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PLANNING_MISE_A_JOUR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise à Jour du Planning Stripe Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../REMBOURSEMENTS_ET_ANNULATIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remboursements &amp; Annulations - Guide Complet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESSOURCES_OFFICIELLES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources Officielles - Conformité &amp; Sécurité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SPRINT_PLANNING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint Planning - Gestion des Abonnements Stripe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../START_HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 START HERE - Guide de Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guide-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Guide d'Utilisation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-owasp-top-10-vulnerabilites-web-courantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. OWASP Top 10 - Vulnérabilités Web Courantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. OWASP Top 10 - Vulnérabilités Web Courantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-a012021-broken-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 A01:2021 – Broken Access Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-a022021-cryptographic-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 A02:2021 – Cryptographic Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-a032021-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 A03:2021 – Injection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-a042021-insecure-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 A04:2021 – Insecure Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-a052021-security-misconfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 A05:2021 – Security Misconfiguration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-a062021-vulnerable-and-outdated-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 A06:2021 – Vulnerable and Outdated Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-a072021-identification-and-authentication-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 A07:2021 – Identification and Authentication Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-a082021-software-and-data-integrity-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 A08:2021 – Software and Data Integrity Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-a092021-logging-and-monitoring-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 A09:2021 – Logging and Monitoring Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-a102021-server-side-request-forgery-ssrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 A10:2021 – Server-Side Request Forgery (SSRF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-stripe-security-bonnes-pratiques-specifiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Stripe Security - Bonnes Pratiques Spécifiques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Stripe Security - Bonnes Pratiques Spécifiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-gestion-des-cles-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Gestion des Clés API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-webhooks-stripe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Webhooks Stripe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-paiements-securises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Paiements Sécurisés
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-abonnements-securises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Abonnements Sécurisés
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-firebase-security-bonnes-pratiques-specifiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Firebase Security - Bonnes Pratiques Spécifiques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Firebase Security - Bonnes Pratiques Spécifiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-firestore-security-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Firestore Security Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-firebase-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Firebase Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-cloud-functions-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Cloud Functions Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resume-des-priorites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Résumé des Priorités
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Résumé des Priorités">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critique-a-faire-avant-tout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Critique (À faire avant tout)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haute-priorite-a-faire-avant-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟠 Haute Priorité (À faire avant production)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moyenne-priorite-a-faire-avant-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 Moyenne Priorité (À faire avant expansion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ressources-officielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ressources Officielles
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="checklist-securite-stripe-authentification">Checklist Sécurité - Stripe &amp; Authentification</h1>
+<p><strong>Date de création</strong> : 11 novembre 2025<br />
+<strong>Statut</strong> : 🔵 En cours de rédaction<br />
+<strong>Propriétaire</strong> : Équipe Dev<br />
+<strong>Dernière mise à jour</strong> : 11 novembre 2025</p>
+<hr />
+<h2 id="guide-dutilisation">📖 Guide d'Utilisation</h2>
+<p>Cette checklist est basée sur :
+- <strong>OWASP Top 10</strong> (Standard de sécurité web)
+- <strong>Stripe Security</strong> (Documentation officielle Stripe)
+- <strong>Firebase Security</strong> (Documentation officielle Firebase)
+- <strong>PCI-DSS</strong> (Norme de sécurité des paiements)</p>
+<p><strong>Comment l'utiliser</strong> :
+1. Lire chaque section
+2. Comprendre le risque
+3. Implémenter la solution
+4. Cocher la case
+5. Tester</p>
+<hr />
+<h2 id="1-owasp-top-10-vulnerabilites-web-courantes">1. OWASP Top 10 - Vulnérabilités Web Courantes</h2>
+<h3 id="11-a012021-broken-access-control">1.1 A01:2021 – Broken Access Control</h3>
+<p><strong>Risque</strong> : Un utilisateur accède aux données d'un autre utilisateur</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Vérifier l'authentification sur chaque requête</strong></li>
+<li>Chaque endpoint doit vérifier que l'utilisateur est connecté</li>
+<li>
+<p>Firebase Auth gère cela automatiquement ✅</p>
+</li>
+<li>
+<p>[ ] <strong>Vérifier l'autorisation (user_id correspond)</strong></p>
+</li>
+<li>Chaque endpoint doit vérifier que l'utilisateur accède à SES données</li>
+<li>Exemple : <code>if (request.auth.uid != userId) { reject }</code></li>
+<li>
+<p><strong>Code</strong> : Vérifier dans Cloud Functions et Firestore Rules</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter Firestore Security Rules strictes</strong>
+  <div class="highlight"><pre><span></span><code>✅ BON
+match /app_users/{userId} {
+  allow read, write: if request.auth.uid == userId;
+}
+</code></pre></div></p>
+</li>
+<li>
+<p>[ ] <strong>Tester les cas d'attaque</strong></p>
+</li>
+<li>[ ] User A essaie d'accéder à /users/456/profile (User B)</li>
+<li>[ ] User A essaie de modifier /users/456/subscription (User B)</li>
+<li>[ ] User A essaie de supprimer /users/456 (User B)</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+- Firebase Security Rules : https://firebase.google.com/docs/firestore/security/start</p>
+<hr />
+<h3 id="12-a022021-cryptographic-failures">1.2 A02:2021 – Cryptographic Failures</h3>
+<p><strong>Risque</strong> : Les données sensibles ne sont pas chiffrées</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Utiliser HTTPS partout</strong></li>
+<li>Tous les appels API doivent être en HTTPS</li>
+<li>
+<p>Votre app utilise HTTPS ✅</p>
+</li>
+<li>
+<p>[ ] <strong>Chiffrer les données sensibles au repos</strong></p>
+</li>
+<li>
+<p>Firestore chiffre automatiquement ✅</p>
+</li>
+<li>
+<p>[ ] <strong>Ne jamais stocker les mots de passe en clair</strong></p>
+</li>
+<li>
+<p>Firebase Auth gère cela automatiquement ✅</p>
+</li>
+<li>
+<p>[ ] <strong>Ne jamais stocker les numéros de carte</strong></p>
+</li>
+<li>
+<p>Stripe gère cela automatiquement ✅</p>
+</li>
+<li>
+<p>[ ] <strong>Utiliser TLS 1.2+ pour les webhooks</strong></p>
+</li>
+<li>Stripe utilise TLS 1.2+ ✅</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A02_2021-Cryptographic_Failures/
+- Stripe Security : https://stripe.com/docs/security</p>
+<hr />
+<h3 id="13-a032021-injection">1.3 A03:2021 – Injection</h3>
+<p><strong>Risque</strong> : Un attaquant injecte du code malveillant dans les requêtes</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Valider toutes les entrées utilisateur</strong></li>
+<li>Email : Format valide (regex ou librairie)</li>
+<li>Montant : Nombre positif</li>
+<li>
+<p>UID : Format Firebase</p>
+</li>
+<li>
+<p>[ ] <strong>Utiliser des requêtes paramétrées</strong></p>
+</li>
+<li>✅ BON : <code>db.collection('users').where('email', '==', email)</code></li>
+<li>
+<p>Firestore utilise les requêtes paramétrées ✅</p>
+</li>
+<li>
+<p>[ ] <strong>Tester les cas d'injection</strong></p>
+</li>
+<li>[ ] Injecter <code>' OR '1'='1</code> dans email</li>
+<li>[ ] Injecter <code>&lt;script&gt;alert('xss')&lt;/script&gt;</code> dans nom</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A03_2021-Injection/</p>
+<hr />
+<h3 id="14-a042021-insecure-design">1.4 A04:2021 – Insecure Design</h3>
+<p><strong>Risque</strong> : L'architecture n'est pas pensée pour la sécurité</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Implémenter rate limiting</strong></li>
+<li>Limiter les tentatives de connexion (ex: 5 par 15 min)</li>
+<li>
+<p>Limiter les appels API (ex: 100 par heure)</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter account lockout</strong></p>
+</li>
+<li>Après N tentatives échouées, bloquer le compte</li>
+<li>
+<p>Envoyer email d'alerte</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter monitoring des anomalies</strong></p>
+</li>
+<li>Détecter les connexions depuis pays inconnus</li>
+<li>
+<p>Détecter les pics d'activité</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter audit trails complets</strong></p>
+</li>
+<li>Logger toutes les actions sensibles</li>
+<li>Inclure : timestamp, user_id, action, résultat</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A04_2021-Insecure_Design/</p>
+<hr />
+<h3 id="15-a052021-security-misconfiguration">1.5 A05:2021 – Security Misconfiguration</h3>
+<p><strong>Risque</strong> : Les services ne sont pas correctement configurés</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Vérifier les Firestore Security Rules</strong></li>
+<li>Pas de <code>allow read: if true;</code> sauf pour données publiques</li>
+<li>
+<p>Pas de <code>allow write: if true;</code> jamais</p>
+</li>
+<li>
+<p>[ ] <strong>Vérifier les Cloud Functions</strong></p>
+</li>
+<li>Pas de secrets en dur (API keys, etc.)</li>
+<li>
+<p>Utiliser les variables d'environnement</p>
+</li>
+<li>
+<p>[ ] <strong>Vérifier les permissions Firebase</strong></p>
+</li>
+<li>
+<p>Seuls les admins peuvent modifier les règles</p>
+</li>
+<li>
+<p>[ ] <strong>Vérifier les headers de sécurité</strong></p>
+</li>
+<li>Content-Security-Policy</li>
+<li>X-Frame-Options</li>
+<li>X-Content-Type-Options</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A05_2021-Security_Misconfiguration/</p>
+<hr />
+<h3 id="16-a062021-vulnerable-and-outdated-components">1.6 A06:2021 – Vulnerable and Outdated Components</h3>
+<p><strong>Risque</strong> : Utiliser des librairies avec des failles de sécurité</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Mettre à jour les dépendances régulièrement</strong></li>
+<li>Flutter : <code>flutter pub upgrade</code></li>
+<li>Node.js : <code>npm update</code></li>
+<li>
+<p>Fréquence : Chaque mois minimum</p>
+</li>
+<li>
+<p>[ ] <strong>Vérifier les dépendances vulnérables</strong></p>
+</li>
+<li>Flutter : <code>flutter pub outdated</code></li>
+<li>
+<p>Node.js : <code>npm audit</code></p>
+</li>
+<li>
+<p>[ ] <strong>Utiliser des versions stables</strong></p>
+</li>
+<li>Pas de versions alpha/beta en production</li>
+<li>
+<p>Utiliser les versions LTS (Long Term Support)</p>
+</li>
+<li>
+<p>[ ] <strong>Monitorer les annonces de sécurité</strong></p>
+</li>
+<li>S'abonner aux alertes Firebase</li>
+<li>S'abonner aux alertes Stripe</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/</p>
+<hr />
+<h3 id="17-a072021-identification-and-authentication-failures">1.7 A07:2021 – Identification and Authentication Failures</h3>
+<p><strong>Risque</strong> : L'authentification n'est pas sécurisée</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Vérifier l'email avant d'accéder aux fonctionnalités</strong></li>
+<li>Envoyer email de vérification</li>
+<li>
+<p>Bloquer les actions tant que email non vérifié</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter password reset sécurisé</strong></p>
+</li>
+<li>Envoyer lien de réinitialisation par email</li>
+<li>
+<p>Lien valide 1 heure seulement</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter 2FA (optionnel mais recommandé)</strong></p>
+</li>
+<li>
+<p>Authentification à deux facteurs (SMS, authenticator app)</p>
+</li>
+<li>
+<p>[ ] <strong>Ne pas exposer les erreurs d'authentification</strong></p>
+</li>
+<li>❌ MAUVAIS : "Email n'existe pas"</li>
+<li>✅ BON : "Email ou mot de passe incorrect"</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/
+- Firebase Auth : https://firebase.google.com/docs/auth/best-practices</p>
+<hr />
+<h3 id="18-a082021-software-and-data-integrity-failures">1.8 A08:2021 – Software and Data Integrity Failures</h3>
+<p><strong>Risque</strong> : Les données ou le code peuvent être modifiés sans détection</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Valider les webhooks Stripe</strong></li>
+<li>Vérifier la signature HMAC-SHA256</li>
+<li>
+<p>Vérifier le timestamp</p>
+</li>
+<li>
+<p>[ ] <strong>Valider les signatures des API calls</strong></p>
+</li>
+<li>Signer les requêtes importantes</li>
+<li>
+<p>Vérifier la signature côté serveur</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter checksums pour les données critiques</strong></p>
+</li>
+<li>Montants de paiement</li>
+<li>Statuts d'abonnement</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/
+- Stripe Webhooks : https://stripe.com/docs/webhooks/signatures</p>
+<hr />
+<h3 id="19-a092021-logging-and-monitoring-failures">1.9 A09:2021 – Logging and Monitoring Failures</h3>
+<p><strong>Risque</strong> : Pas de trace des événements → Impossible d'enquêter</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Logger tous les événements sensibles</strong></li>
+<li>Connexions (succès + échecs)</li>
+<li>Changements de rôle</li>
+<li>Paiements (succès + échecs)</li>
+<li>
+<p>Suppressions de compte</p>
+</li>
+<li>
+<p>[ ] <strong>Inclure les bonnes informations dans les logs</strong></p>
+</li>
+<li>
+<p>Timestamp, User ID, Action, Résultat</p>
+</li>
+<li>
+<p>[ ] <strong>Protéger les logs</strong></p>
+</li>
+<li>Pas d'accès public</li>
+<li>Chiffrer les logs sensibles</li>
+<li>
+<p>Conserver 90 jours minimum</p>
+</li>
+<li>
+<p>[ ] <strong>Monitorer les logs pour anomalies</strong></p>
+</li>
+<li>Alerter sur N connexions échouées</li>
+<li>Alerter sur paiements échoués</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/</p>
+<hr />
+<h3 id="110-a102021-server-side-request-forgery-ssrf">1.10 A10:2021 – Server-Side Request Forgery (SSRF)</h3>
+<p><strong>Risque</strong> : Le serveur fait des requêtes à des URL contrôlées par l'attaquant</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>[ ] <strong>Valider toutes les URLs</strong></li>
+<li>Vérifier que l'URL est dans une whitelist</li>
+<li>
+<p>Vérifier que l'URL n'est pas interne (localhost, 192.168.*, etc.)</p>
+</li>
+<li>
+<p>[ ] <strong>Utiliser des timeouts</strong></p>
+</li>
+<li>
+<p>Limiter le temps des requêtes externes</p>
+</li>
+<li>
+<p>[ ] <strong>Limiter les protocoles</strong></p>
+</li>
+<li>Autoriser seulement HTTPS</li>
+<li>Pas de file://, ftp://, etc.</li>
+</ul>
+<p><strong>Ressources</strong> :
+- OWASP : https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/</p>
+<hr />
+<h2 id="2-stripe-security-bonnes-pratiques-specifiques">2. Stripe Security - Bonnes Pratiques Spécifiques</h2>
+<p><strong>Source officielle</strong> : https://stripe.com/docs/security</p>
+<h3 id="21-gestion-des-cles-api">2.1 Gestion des Clés API</h3>
+<ul>
+<li>[ ] <strong>Utiliser des clés sécrètes, jamais publiques pour les opérations sensibles</strong></li>
+<li>Clé publique : Utilisée côté client (checkout)</li>
+<li>Clé secrète : Utilisée côté serveur UNIQUEMENT</li>
+<li>
+<p>Stocker clé secrète dans variables d'environnement</p>
+</li>
+<li>
+<p>[ ] <strong>Rotationner les clés régulièrement</strong></p>
+</li>
+<li>Créer nouvelle clé</li>
+<li>Mettre à jour le code</li>
+<li>Supprimer l'ancienne clé</li>
+<li>
+<p>Fréquence : Chaque 6 mois minimum</p>
+</li>
+<li>
+<p>[ ] <strong>Utiliser des clés restreintes (Restricted API Keys)</strong></p>
+</li>
+<li>Limiter les permissions par clé</li>
+<li>
+<p>Exemple : Clé pour webhooks seulement</p>
+</li>
+<li>
+<p>[ ] <strong>Monitorer l'utilisation des clés</strong></p>
+</li>
+<li>Vérifier les clés utilisées</li>
+<li>Vérifier les actions effectuées</li>
+</ul>
+<p><strong>Ressources</strong> :
+- Stripe API Keys : https://stripe.com/docs/keys</p>
+<hr />
+<h3 id="22-webhooks-stripe">2.2 Webhooks Stripe</h3>
+<p><strong>Risque</strong> : Quelqu'un peut prétendre être Stripe et envoyer de faux webhooks</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>
+<p>[ ] <strong>Vérifier la signature HMAC-SHA256</strong>
+  <div class="highlight"><pre><span></span><code>const signature = req.headers[&#39;stripe-signature&#39;];
+const event = stripe.webhooks.constructEvent(
+  req.body,
+  signature,
+  process.env.STRIPE_WEBHOOK_SECRET
+);
+</code></pre></div></p>
+</li>
+<li>
+<p>[ ] <strong>Vérifier le timestamp du webhook</strong></p>
+</li>
+<li>
+<p>Rejeter les webhooks trop anciens (&gt; 5 minutes)</p>
+</li>
+<li>
+<p>[ ] <strong>Logger tous les webhooks</strong></p>
+</li>
+<li>
+<p>Inclure : timestamp, event_id, type, résultat</p>
+</li>
+<li>
+<p>[ ] <strong>Gérer les erreurs de webhook</strong></p>
+</li>
+<li>Retourner 200 OK même en cas d'erreur</li>
+<li>
+<p>Retry automatique par Stripe</p>
+</li>
+<li>
+<p>[ ] <strong>Tester les webhooks</strong></p>
+</li>
+<li>Utiliser Stripe CLI pour tester</li>
+<li>Tester tous les événements importants</li>
+</ul>
+<p><strong>Ressources</strong> :
+- Stripe Webhooks : https://stripe.com/docs/webhooks
+- Stripe Webhooks Security : https://stripe.com/docs/webhooks/signatures
+- Stripe CLI : https://stripe.com/docs/stripe-cli</p>
+<hr />
+<h3 id="23-paiements-securises">2.3 Paiements Sécurisés</h3>
+<ul>
+<li>[ ] <strong>Ne jamais stocker les numéros de carte</strong></li>
+<li>Utiliser Stripe Checkout ou Payment Element</li>
+<li>
+<p>Vous recevez un token, pas la carte</p>
+</li>
+<li>
+<p>[ ] <strong>Utiliser Stripe Checkout (recommandé)</strong></p>
+</li>
+<li>Gère la sécurité automatiquement</li>
+<li>
+<p>Gère la conformité PCI-DSS</p>
+</li>
+<li>
+<p>[ ] <strong>Valider les montants côté serveur</strong></p>
+</li>
+<li>Ne pas faire confiance au montant du client</li>
+<li>
+<p>Recalculer le montant côté serveur</p>
+</li>
+<li>
+<p>[ ] <strong>Utiliser Stripe Testing</strong></p>
+</li>
+<li>Numéros de carte de test fournis par Stripe</li>
+<li>Tester tous les scénarios (succès, échec, etc.)</li>
+</ul>
+<p><strong>Ressources</strong> :
+- Stripe Payments : https://stripe.com/docs/payments
+- Stripe Checkout : https://stripe.com/docs/payments/checkout
+- Stripe Testing : https://stripe.com/docs/testing</p>
+<hr />
+<h3 id="24-abonnements-securises">2.4 Abonnements Sécurisés</h3>
+<ul>
+<li>[ ] <strong>Valider les changements d'abonnement</strong></li>
+<li>Vérifier que l'utilisateur a le droit de modifier</li>
+<li>
+<p>Vérifier que le nouvel abonnement existe</p>
+</li>
+<li>
+<p>[ ] <strong>Gérer les erreurs de paiement</strong></p>
+</li>
+<li>Retry automatique</li>
+<li>Notification utilisateur</li>
+<li>
+<p>Escalade en cas d'erreur persistante</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter dunning (recouvrement)</strong></p>
+</li>
+<li>Relancer après paiement échoué</li>
+<li>Augmenter la fréquence des relances</li>
+<li>
+<p>Finalement annuler l'abonnement</p>
+</li>
+<li>
+<p>[ ] <strong>Permettre l'annulation facile</strong></p>
+</li>
+<li>Bouton "Annuler l'abonnement" visible</li>
+<li>Pas de processus compliqué</li>
+</ul>
+<p><strong>Ressources</strong> :
+- Stripe Subscriptions : https://stripe.com/docs/billing/subscriptions/overview
+- Stripe Dunning : https://stripe.com/docs/billing/subscriptions/dunning</p>
+<hr />
+<h2 id="3-firebase-security-bonnes-pratiques-specifiques">3. Firebase Security - Bonnes Pratiques Spécifiques</h2>
+<p><strong>Source officielle</strong> : https://firebase.google.com/docs/firestore/security/start</p>
+<h3 id="31-firestore-security-rules">3.1 Firestore Security Rules</h3>
+<p><strong>Risque</strong> : Données accessibles à n'importe qui</p>
+<p><strong>Solutions</strong> :</p>
+<ul>
+<li>
+<p>[ ] <strong>Implémenter des règles strictes par défaut</strong>
+  <div class="highlight"><pre><span></span><code>✅ BON
+match /{document=**} {
+  allow read, write: if false;
+}
+</code></pre></div></p>
+</li>
+<li>
+<p>[ ] <strong>Vérifier l'authentification</strong>
+  <div class="highlight"><pre><span></span><code>✅ BON
+match /app_users/{userId} {
+  allow read, write: if request.auth != null;
+}
+</code></pre></div></p>
+</li>
+<li>
+<p>[ ] <strong>Vérifier l'autorisation (user_id correspond)</strong>
+  <div class="highlight"><pre><span></span><code>✅ BON
+match /app_users/{userId} {
+  allow read, write: if request.auth.uid == userId;
+}
+</code></pre></div></p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter des rôles (admin, user, etc.)</strong>
+  <div class="highlight"><pre><span></span><code>function isAdmin() {
+  return get(/databases/$(database)/documents/app_users/$(request.auth.uid)).data.role == &quot;admin&quot;;
+}
+</code></pre></div></p>
+</li>
+<li>
+<p>[ ] <strong>Tester les règles</strong></p>
+</li>
+<li>Utiliser Firestore Emulator</li>
+<li>Tester tous les cas (authentifié, non authentifié, admin, user)</li>
+</ul>
+<p><strong>Ressources</strong> :
+- Firestore Security Rules : https://firebase.google.com/docs/firestore/security/start
+- Firestore Emulator : https://firebase.google.com/docs/emulator-suite</p>
+<hr />
+<h3 id="32-firebase-authentication">3.2 Firebase Authentication</h3>
+<ul>
+<li>[ ] <strong>Activer l'authentification par email/mot de passe</strong></li>
+<li>
+<p>Vérifier l'email avant d'accéder aux fonctionnalités</p>
+</li>
+<li>
+<p>[ ] <strong>Activer les fournisseurs OAuth (Google, Apple)</strong></p>
+</li>
+<li>
+<p>Sécurisé et facile</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter password reset</strong></p>
+</li>
+<li>Lien de réinitialisation par email</li>
+<li>
+<p>Lien valide 1 heure</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter account deletion</strong></p>
+</li>
+<li>Permettre à l'utilisateur de supprimer son compte</li>
+<li>Supprimer toutes les données associées</li>
+</ul>
+<p><strong>Ressources</strong> :
+- Firebase Authentication : https://firebase.google.com/docs/auth
+- Firebase Authentication Best Practices : https://firebase.google.com/docs/auth/best-practices</p>
+<hr />
+<h3 id="33-cloud-functions-security">3.3 Cloud Functions Security</h3>
+<ul>
+<li>[ ] <strong>Valider toutes les entrées</strong></li>
+<li>Email : Format valide</li>
+<li>Montant : Nombre positif</li>
+<li>
+<p>UID : Format Firebase</p>
+</li>
+<li>
+<p>[ ] <strong>Utiliser des variables d'environnement pour les secrets</strong>
+  <div class="highlight"><pre><span></span><code>✅ BON
+const stripeKey = process.env.STRIPE_SECRET_KEY;
+</code></pre></div></p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter rate limiting</strong></p>
+</li>
+<li>Limiter les appels par utilisateur</li>
+<li>
+<p>Limiter les appels par IP</p>
+</li>
+<li>
+<p>[ ] <strong>Implémenter timeouts</strong></p>
+</li>
+<li>Limiter le temps d'exécution des fonctions</li>
+</ul>
+<p><strong>Ressources</strong> :
+- Cloud Functions Security : https://firebase.google.com/docs/functions/security/overview</p>
+<hr />
+<h2 id="4-resume-des-priorites">4. Résumé des Priorités</h2>
+<h3 id="critique-a-faire-avant-tout">🔴 Critique (À faire avant tout)</h3>
+<ul>
+<li>[ ] Firestore Security Rules strictes</li>
+<li>[ ] Validation des webhooks Stripe</li>
+<li>[ ] Authentification Firebase</li>
+<li>[ ] Audit trails complets</li>
+</ul>
+<h3 id="haute-priorite-a-faire-avant-production">🟠 Haute Priorité (À faire avant production)</h3>
+<ul>
+<li>[ ] Rate limiting</li>
+<li>[ ] Gestion des erreurs de paiement</li>
+<li>[ ] Droit à l'oubli (RGPD)</li>
+<li>[ ] Export de données (RGPD)</li>
+</ul>
+<h3 id="moyenne-priorite-a-faire-avant-expansion">🟡 Moyenne Priorité (À faire avant expansion)</h3>
+<ul>
+<li>[ ] 2FA</li>
+<li>[ ] Dunning (recouvrement)</li>
+<li>[ ] Monitoring des anomalies</li>
+<li>[ ] Audit externe de sécurité</li>
+</ul>
+<hr />
+<h2 id="5-ressources-officielles">5. Ressources Officielles</h2>
+<ul>
+<li>OWASP Top 10 : https://owasp.org/www-project-top-ten/</li>
+<li>Stripe Security : https://stripe.com/docs/security</li>
+<li>Firebase Security : https://firebase.google.com/docs/firestore/security/start</li>
+<li>PCI-DSS : https://www.pcisecuritystandards.org/</li>
+</ul>
+<hr />
+<p><strong>Document créé par Cascade - Checklist de sécurité pour Yinshi</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3007 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation du projet Yinshi (vue via md2html)">
+      
+      
+      
+      
+        <link rel="prev" href="../TESTING_PROCEDURE/">
+      
+      
+        <link rel="next" href="../_sidebar/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>📦 Guide de Versioning - Yin Shi - Yinshi Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guide-de-versioning-yin-shi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yinshi Documentation" class="md-header__button md-logo" aria-label="Yinshi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yinshi Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📦 Guide de Versioning - Yin Shi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yinshi Documentation" class="md-nav__button md-logo" aria-label="Yinshi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yinshi Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Yinshi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE_AUTH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture d'Authentification - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGNOSTIC_WORKFLOW_APPLE_BUILD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 Rapport Diagnostic Complet - Workflow Apple Build (Run #18686872188)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EMAIL_CONFIGURATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration des Emails - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IMPLEMENTATION_VERIFICATION_EMAIL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implémentation de la Vérification d'Email
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MULTIPLATFORM_COMPATIBILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌐 Compatibilité Multi-Plateforme - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OFFICIAL_RECOMMENDATIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Recommandations Officielles Flutter &amp; Firebase - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PERTE_COMPATIBILITE_ANDROID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perte de Compatibilité Android - Analyse et Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROBLEME_FIRESTORE_EXPLICATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 Problème Firestore - Explication Complète
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROUTE_PROTECTION_EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔐 Évaluation de la Protection des Routes - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SETUP_GITHUB_ACTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Configuration GitHub Actions - Guide rapide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TESTING_PROCEDURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Procédure de Test - Vérification d'Email
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Guide de Versioning - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Guide de Versioning - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#format-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Format de version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-de-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Workflow de versioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Workflow de versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pour-les-developpeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour les développeurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour les développeurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-corrections-de-bugs-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Corrections de bugs (PATCH)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-nouvelles-fonctionnalites-minor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Nouvelles fonctionnalités (MINOR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-changements-majeurs-major" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Changements majeurs (MAJOR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-verifier-la-version-actuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Vérifier la version actuelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pour-github-actions-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour GitHub Actions (Android)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convention-de-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Convention de versioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Convention de versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-incrementer-major" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand incrémenter MAJOR ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-incrementer-minor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand incrémenter MINOR ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-incrementer-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand incrémenter PATCH ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build number
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-multi-developpeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Workflow multi-développeurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Workflow multi-développeurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-developpement-en-parallele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 1 : Développement en parallèle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 2 : Release
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Bonnes pratiques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Bonnes pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-faire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ À FAIRE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-eviter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ À ÉVITER
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-conflits-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚔️ Gestion des conflits de version
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚔️ Gestion des conflits de version">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-deux-developpeurs-incrementent-en-parallele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario : Deux développeurs incrémentent en parallèle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-premier-arrive-premier-servi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Résolution : Premier arrivé, premier servi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategies-de-prevention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ Stratégies de prévention
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ Stratégies de prévention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategie-1-communication-recommande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratégie 1 : Communication (Recommandé)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategie-2-incrementer-au-moment-du-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratégie 2 : Incrémenter au moment du merge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategie-3-releases-coordonnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratégie 3 : Releases coordonnées
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-des-conflits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Détection des conflits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Outils
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Outils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script-check-version-conflictsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script check-version-conflict.sh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-version-managersh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script version-manager.sh
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specificites-par-plateforme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📱 Spécificités par plateforme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Spécificités par plateforme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-linux-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows / Linux / macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-pwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web (PWA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-cas-de-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 En cas de problème
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📞 En cas de problème">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-code-already-exists-sur-play-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Version code already exists" sur Play Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflit-de-version-entre-developpeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conflit de version entre développeurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-number-desynchronise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build number désynchronisé
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎉 Résumé
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-notes-de-version-whatsnew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Gestion des notes de version (WhatsNew)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Gestion des notes de version (WhatsNew)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-des-fichiers-whatsnew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure des fichiers WhatsNew
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure des fichiers WhatsNew">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fichiers-de-traduction-multilingue-whatsnew-xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fichiers de traduction multilingue (whatsnew-xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fichiers-de-suivi-par-version-whatsnew-xxx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fichiers de suivi par version (whatsnew-x.x.x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-de-mise-a-jour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow de mise à jour
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_sidebar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+     sidebar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide_roles_utilisateurs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide des Rôles Utilisateurs - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-deployment-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suivi déploiement web (GitHub Actions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google conundrum
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Google conundrum
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dossier docs/google_conundrum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_FEEDBACK_AND_VISIBILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comment Google voit les tests et les retours utilisateurs (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_PRODUCTION_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist – Accès à la production Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_PRODUCTION_RAPPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rapport – Problème d’accès à la production Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_PRODUCTION_STRATEGIE_AGILE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stratégie agile – Accès à la production Google Play pour Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_TESTERS_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide testeurs – Campagne de test fermé Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_TESTERS_INVITATION_TEMPLATES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates de messages d’invitation – Test fermé Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_TEST_TRACKING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suivi de la campagne de test fermé – Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pwa ameliore
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pwa ameliore
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa_ameliore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PWA Yin Shi – Mise à jour fiabilisée &amp; site de test DreamHost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stripe compliance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stripe compliance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/ARCHITECTURE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Stripe - Design Technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/AUDIT_CONFORMITE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit de Conformité Stripe - Yinshi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/BACKLOG_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog Stripe - Gestion des Abonnements &amp; Authentification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/CHECKLIST_SECURITE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist Sécurité - Stripe &amp; Authentification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/GESTION_AVANCEE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion Avancée Stripe - Guide Complet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/PLANNING_MISE_A_JOUR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise à Jour du Planning Stripe Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/REMBOURSEMENTS_ET_ANNULATIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remboursements &amp; Annulations - Guide Complet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/RESSOURCES_OFFICIELLES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources Officielles - Conformité &amp; Sécurité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/SPRINT_PLANNING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint Planning - Gestion des Abonnements Stripe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/START_HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 START HERE - Guide de Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#format-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Format de version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-de-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Workflow de versioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Workflow de versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pour-les-developpeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour les développeurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour les développeurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-corrections-de-bugs-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Corrections de bugs (PATCH)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-nouvelles-fonctionnalites-minor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Nouvelles fonctionnalités (MINOR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-changements-majeurs-major" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Changements majeurs (MAJOR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-verifier-la-version-actuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Vérifier la version actuelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pour-github-actions-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour GitHub Actions (Android)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convention-de-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Convention de versioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Convention de versioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-incrementer-major" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand incrémenter MAJOR ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-incrementer-minor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand incrémenter MINOR ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quand-incrementer-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand incrémenter PATCH ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build number
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-multi-developpeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Workflow multi-développeurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Workflow multi-développeurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-developpement-en-parallele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 1 : Développement en parallèle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario 2 : Release
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Bonnes pratiques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Bonnes pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-faire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ À FAIRE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-eviter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ À ÉVITER
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-conflits-de-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚔️ Gestion des conflits de version
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚔️ Gestion des conflits de version">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-deux-developpeurs-incrementent-en-parallele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scénario : Deux développeurs incrémentent en parallèle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-premier-arrive-premier-servi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Résolution : Premier arrivé, premier servi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategies-de-prevention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ Stratégies de prévention
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ Stratégies de prévention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategie-1-communication-recommande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratégie 1 : Communication (Recommandé)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategie-2-incrementer-au-moment-du-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratégie 2 : Incrémenter au moment du merge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategie-3-releases-coordonnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratégie 3 : Releases coordonnées
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-des-conflits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Détection des conflits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outils" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Outils
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Outils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script-check-version-conflictsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script check-version-conflict.sh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-version-managersh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script version-manager.sh
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specificites-par-plateforme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📱 Spécificités par plateforme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 Spécificités par plateforme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Android
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-linux-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows / Linux / macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-pwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web (PWA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#en-cas-de-probleme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 En cas de problème
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📞 En cas de problème">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-code-already-exists-sur-play-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Version code already exists" sur Play Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflit-de-version-entre-developpeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conflit de version entre développeurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-number-desynchronise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build number désynchronisé
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎉 Résumé
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-notes-de-version-whatsnew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Gestion des notes de version (WhatsNew)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Gestion des notes de version (WhatsNew)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-des-fichiers-whatsnew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure des fichiers WhatsNew
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure des fichiers WhatsNew">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fichiers-de-traduction-multilingue-whatsnew-xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fichiers de traduction multilingue (whatsnew-xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fichiers-de-suivi-par-version-whatsnew-xxx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fichiers de suivi par version (whatsnew-x.x.x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-de-mise-a-jour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow de mise à jour
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemple de workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guide-de-versioning-yin-shi">📦 Guide de Versioning - Yin Shi</h1>
+<p>Ce guide explique comment gérer les versions de l'application Yin Shi de manière cohérente entre tous les développeurs et toutes les plateformes.</p>
+<h2 id="format-de-version">📋 Format de version</h2>
+<div class="highlight"><pre><span></span><code>MAJOR.MINOR.PATCH+BUILD
+</code></pre></div>
+<p>Exemple: <code>1.0.8+24</code></p>
+<ul>
+<li><strong>MAJOR</strong> (1) : Changements majeurs incompatibles (breaking changes)</li>
+<li><strong>MINOR</strong> (0) : Nouvelles fonctionnalités (rétrocompatible)</li>
+<li><strong>PATCH</strong> (8) : Corrections de bugs</li>
+<li><strong>BUILD</strong> (24) : Numéro de build (auto-incrémenté)</li>
+</ul>
+<h2 id="workflow-de-versioning">🚀 Workflow de versioning</h2>
+<h3 id="pour-les-developpeurs">Pour les développeurs</h3>
+<h4 id="1-corrections-de-bugs-patch">1. Corrections de bugs (PATCH)</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Incrémenter la version patch</span>
+./scripts/version-manager.sh<span class="w"> </span>patch
+
+<span class="c1"># Commit et push</span>
+git<span class="w"> </span>add<span class="w"> </span>pubspec.yaml
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;🐛 Fix: Description du bug corrigé&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div>
+<p><strong>Exemple</strong>: <code>1.0.8</code> → <code>1.0.9</code></p>
+<h4 id="2-nouvelles-fonctionnalites-minor">2. Nouvelles fonctionnalités (MINOR)</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Incrémenter la version minor</span>
+./scripts/version-manager.sh<span class="w"> </span>minor
+
+<span class="c1"># Commit et push</span>
+git<span class="w"> </span>add<span class="w"> </span>pubspec.yaml
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;✨ Feature: Description de la nouvelle fonctionnalité&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div>
+<p><strong>Exemple</strong>: <code>1.0.9</code> → <code>1.1.0</code></p>
+<h4 id="3-changements-majeurs-major">3. Changements majeurs (MAJOR)</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Incrémenter la version major</span>
+./scripts/version-manager.sh<span class="w"> </span>major
+
+<span class="c1"># Commit et push</span>
+git<span class="w"> </span>add<span class="w"> </span>pubspec.yaml
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;💥 Breaking: Description du changement majeur&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div>
+<p><strong>Exemple</strong>: <code>1.1.0</code> → <code>2.0.0</code></p>
+<h4 id="4-verifier-la-version-actuelle">4. Vérifier la version actuelle</h4>
+<div class="highlight"><pre><span></span><code>./scripts/version-manager.sh<span class="w"> </span>show
+</code></pre></div>
+<h3 id="pour-github-actions-android">Pour GitHub Actions (Android)</h3>
+<p>Le <strong>build number</strong> est <strong>automatiquement incrémenté</strong> par le workflow GitHub Actions :</p>
+<ol>
+<li>Vous lancez le workflow</li>
+<li>Le workflow lit <code>1.0.8+23</code> dans <code>pubspec.yaml</code></li>
+<li>Il incrémente automatiquement : <code>1.0.8+24</code></li>
+<li>Il build avec le nouveau numéro</li>
+<li>Il commit le nouveau numéro dans le repo</li>
+</ol>
+<p><strong>Résultat</strong> : Vous n'avez <strong>jamais</strong> à incrémenter manuellement le build number pour Android !</p>
+<h2 id="convention-de-versioning">📊 Convention de versioning</h2>
+<h3 id="quand-incrementer-major">Quand incrémenter MAJOR ?</h3>
+<ul>
+<li>Refonte complète de l'interface</li>
+<li>Changement de base de données incompatible</li>
+<li>Suppression de fonctionnalités majeures</li>
+<li>Migration vers une nouvelle architecture</li>
+</ul>
+<p><strong>Fréquence</strong>: Rare (tous les ans ou plus)</p>
+<h3 id="quand-incrementer-minor">Quand incrémenter MINOR ?</h3>
+<ul>
+<li>Ajout d'une nouvelle fonctionnalité</li>
+<li>Amélioration significative d'une fonctionnalité existante</li>
+<li>Ajout d'une nouvelle page/écran</li>
+<li>Nouvelle intégration (nouveau service, nouvelle API)</li>
+</ul>
+<p><strong>Fréquence</strong>: Régulière (toutes les semaines/mois)</p>
+<h3 id="quand-incrementer-patch">Quand incrémenter PATCH ?</h3>
+<ul>
+<li>Correction de bug</li>
+<li>Amélioration de performance</li>
+<li>Correction de texte/traduction</li>
+<li>Petite amélioration UX</li>
+</ul>
+<p><strong>Fréquence</strong>: Très régulière (plusieurs fois par semaine)</p>
+<h3 id="build-number">Build number</h3>
+<ul>
+<li><strong>Automatiquement incrémenté</strong> par CI/CD pour Android</li>
+<li>Unique et toujours croissant</li>
+<li>Ne jamais le modifier manuellement pour Android</li>
+<li>Pour les autres plateformes, suivre la convention de la plateforme</li>
+</ul>
+<h2 id="workflow-multi-developpeurs">🔄 Workflow multi-développeurs</h2>
+<h3 id="scenario-1-developpement-en-parallele">Scénario 1 : Développement en parallèle</h3>
+<p><strong>Développeur A</strong> travaille sur une fonctionnalité :
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/nouvelle-fonction
+<span class="c1"># Développement...</span>
+./scripts/version-manager.sh<span class="w"> </span>minor<span class="w">  </span><span class="c1"># 1.0.8 → 1.1.0</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;✨ Feature: Nouvelle fonction&quot;</span>
+</code></pre></div></p>
+<p><strong>Développeur B</strong> corrige un bug en même temps :
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>fix/bug-xyz
+<span class="c1"># Correction...</span>
+./scripts/version-manager.sh<span class="w"> </span>patch<span class="w">  </span><span class="c1"># 1.0.8 → 1.0.9</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;🐛 Fix: Correction bug XYZ&quot;</span>
+</code></pre></div></p>
+<p><strong>Résolution</strong> :
+1. Merger d'abord le fix (plus urgent) → Version 1.0.9
+2. Développeur A rebase et adapte → Version 1.1.0
+3. Pas de conflit de build number (auto-géré par CI/CD)</p>
+<h3 id="scenario-2-release">Scénario 2 : Release</h3>
+<p><strong>Préparation d'une release</strong> :</p>
+<ol>
+<li>
+<p><strong>Finaliser les fonctionnalités</strong>
+   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>develop
+git<span class="w"> </span>pull
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Incrémenter la version</strong>
+   <div class="highlight"><pre><span></span><code><span class="c1"># Pour une release avec nouvelles fonctionnalités</span>
+./scripts/version-manager.sh<span class="w"> </span>minor
+
+<span class="c1"># Pour une release de corrections uniquement</span>
+./scripts/version-manager.sh<span class="w"> </span>patch
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Mettre à jour les notes de version</strong>
+   <div class="highlight"><pre><span></span><code><span class="c1"># Éditer distribution/whatsnew/whatsnew-fr-FR</span>
+<span class="c1"># Éditer distribution/whatsnew/whatsnew-en-US</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Commit et tag</strong>
+   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>pubspec.yaml<span class="w"> </span>distribution/whatsnew/
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;🚀 Release v1.1.0&quot;</span>
+git<span class="w"> </span>tag<span class="w"> </span>v1.1.0
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>develop<span class="w"> </span>--tags
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Lancer le workflow GitHub Actions</strong></p>
+</li>
+<li>Le build number sera auto-incrémenté</li>
+<li>Le déploiement se fera automatiquement</li>
+</ol>
+<h2 id="bonnes-pratiques">🎯 Bonnes pratiques</h2>
+<h3 id="a-faire">✅ À FAIRE</h3>
+<ul>
+<li>✅ Incrémenter la version <strong>avant</strong> de merger dans <code>main</code>/<code>develop</code></li>
+<li>✅ Mettre à jour les notes de version (<code>whatsnew</code>) pour chaque release</li>
+<li>✅ Utiliser le script <code>version-manager.sh</code> pour éviter les erreurs</li>
+<li>✅ Commiter la version avec un message clair</li>
+<li>✅ Laisser le CI/CD gérer le build number pour Android</li>
+<li>✅ Synchroniser régulièrement (<code>git pull</code>) pour éviter les conflits</li>
+</ul>
+<h3 id="a-eviter">❌ À ÉVITER</h3>
+<ul>
+<li>❌ Ne jamais modifier manuellement le build number pour Android</li>
+<li>❌ Ne pas oublier de commiter <code>pubspec.yaml</code> après incrémentation</li>
+<li>❌ Ne pas incrémenter la version dans plusieurs branches en parallèle</li>
+<li>❌ Ne pas oublier de mettre à jour les notes de version</li>
+</ul>
+<h2 id="gestion-des-conflits-de-version">⚔️ Gestion des conflits de version</h2>
+<h3 id="scenario-deux-developpeurs-incrementent-en-parallele">Scénario : Deux développeurs incrémentent en parallèle</h3>
+<p><strong>Développeur A</strong> :
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/A
+./scripts/version-manager.sh<span class="w"> </span>minor<span class="w">  </span><span class="c1"># 1.0.8 → 1.1.0</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;✨ Feature A&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div></p>
+<p><strong>Développeur B</strong> en même temps :
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/B
+./scripts/version-manager.sh<span class="w"> </span>minor<span class="w">  </span><span class="c1"># 1.0.8 → 1.1.0 (conflit!)</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;✨ Feature B&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div></p>
+<h3 id="resolution-premier-arrive-premier-servi">✅ Résolution : Premier arrivé, premier servi</h3>
+<p><strong>Étape 1</strong> : Le développeur A merge en premier
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>feature/A<span class="w">  </span><span class="c1"># ✅ 1.1.0 sur main</span>
+git<span class="w"> </span>push
+</code></pre></div></p>
+<p><strong>Étape 2</strong> : Le développeur B doit s'adapter
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Vérifier les conflits potentiels</span>
+./scripts/check-version-conflict.sh
+
+<span class="c1"># 2. Pull les changements</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull
+
+<span class="c1"># 3. Rebaser</span>
+git<span class="w"> </span>checkout<span class="w"> </span>feature/B
+git<span class="w"> </span>rebase<span class="w"> </span>main
+<span class="c1"># CONFLIT sur pubspec.yaml !</span>
+
+<span class="c1"># 4. Résoudre : incrémenter à nouveau</span>
+./scripts/version-manager.sh<span class="w"> </span>minor<span class="w">  </span><span class="c1"># 1.1.0 → 1.2.0</span>
+git<span class="w"> </span>add<span class="w"> </span>pubspec.yaml
+git<span class="w"> </span>rebase<span class="w"> </span>--continue
+git<span class="w"> </span>push<span class="w"> </span>--force-with-lease
+</code></pre></div></p>
+<h3 id="strategies-de-prevention">🛡️ Stratégies de prévention</h3>
+<h4 id="strategie-1-communication-recommande">Stratégie 1 : Communication (Recommandé)</h4>
+<p>Communiquez avant d'incrémenter :</p>
+<div class="highlight"><pre><span></span><code>💬 Slack/Discord :
+Dev A: &quot;Je merge feature A, passage en 1.1.0&quot;
+Dev B: &quot;OK, j&#39;attends ⏸️&quot;
+
+[Après merge de A]
+Dev B: git pull &amp;&amp; ./scripts/version-manager.sh minor # 1.1.0 → 1.2.0
+</code></pre></div>
+<h4 id="strategie-2-incrementer-au-moment-du-merge">Stratégie 2 : Incrémenter au moment du merge</h4>
+<p>Ne pas incrémenter dans les branches, mais au moment du merge :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Dans la feature branch : PAS d&#39;incrémentation</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/ma-fonction
+<span class="c1"># ... développement ...</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: ma fonction&quot;</span>
+
+<span class="c1"># Avant de merger : Incrémenter maintenant</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>pull
+./scripts/check-version-conflict.sh<span class="w">  </span><span class="c1"># Vérifier</span>
+./scripts/version-manager.sh<span class="w"> </span>minor
+git<span class="w"> </span>add<span class="w"> </span>pubspec.yaml
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;🔢 Bump version for release&quot;</span>
+git<span class="w"> </span>merge<span class="w"> </span>feature/ma-fonction<span class="w"> </span>--no-ff
+git<span class="w"> </span>push
+</code></pre></div>
+<h4 id="strategie-3-releases-coordonnees">Stratégie 3 : Releases coordonnées</h4>
+<p>Regrouper plusieurs features dans une release :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Phase de développement (1 semaine)</span>
+Dev<span class="w"> </span>A:<span class="w"> </span>feature/A<span class="w"> </span><span class="o">(</span>pas<span class="w"> </span>de<span class="w"> </span>version<span class="w"> </span>change<span class="o">)</span>
+Dev<span class="w"> </span>B:<span class="w"> </span>feature/B<span class="w"> </span><span class="o">(</span>pas<span class="w"> </span>de<span class="w"> </span>version<span class="w"> </span>change<span class="o">)</span>
+Dev<span class="w"> </span>A:<span class="w"> </span>feature/C<span class="w"> </span><span class="o">(</span>pas<span class="w"> </span>de<span class="w"> </span>version<span class="w"> </span>change<span class="o">)</span>
+
+<span class="c1"># Fin de sprint : Release coordonnée</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>feature/A
+git<span class="w"> </span>merge<span class="w"> </span>feature/B<span class="w">  </span>
+git<span class="w"> </span>merge<span class="w"> </span>feature/C
+./scripts/version-manager.sh<span class="w"> </span>minor<span class="w">  </span><span class="c1"># Une seule fois: 1.1.0</span>
+git<span class="w"> </span>push
+</code></pre></div>
+<h3 id="detection-des-conflits">🔍 Détection des conflits</h3>
+<p>Avant d'incrémenter, vérifiez :</p>
+<div class="highlight"><pre><span></span><code>./scripts/check-version-conflict.sh
+</code></pre></div>
+<p>Ce script vous dira :
+- ✅ Version locale vs version sur origin/main
+- ⚠️ S'il y a des conflits potentiels
+- 📊 Commits non pushés/pullés</p>
+<h2 id="outils">🛠️ Outils</h2>
+<h3 id="script-check-version-conflictsh">Script check-version-conflict.sh</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Vérifier les conflits potentiels avant d&#39;incrémenter</span>
+./scripts/check-version-conflict.sh
+</code></pre></div>
+<p>Exemple de sortie :
+<div class="highlight"><pre><span></span><code>🔍 Vérification des conflits de version
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📦 Version locale: 1.0.8+24
+🌐 Version sur origin/main: 1.1.0+25
+
+⚠️  Les versions sont différentes !
+❌ ATTENTION: Conflit de version sémantique !
+
+Recommandations:
+1. git pull origin main
+2. Résoudre les conflits sur pubspec.yaml
+3. Incrémenter à nouveau si nécessaire
+</code></pre></div></p>
+<h3 id="script-version-managersh">Script version-manager.sh</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Afficher la version actuelle</span>
+./scripts/version-manager.sh<span class="w"> </span>show
+
+<span class="c1"># Incrémenter le build (manuel, rarement nécessaire)</span>
+./scripts/version-manager.sh<span class="w"> </span>build
+
+<span class="c1"># Incrémenter patch (bug fixes)</span>
+./scripts/version-manager.sh<span class="w"> </span>patch
+
+<span class="c1"># Incrémenter minor (nouvelles fonctionnalités)</span>
+./scripts/version-manager.sh<span class="w"> </span>minor
+
+<span class="c1"># Incrémenter major (breaking changes)</span>
+./scripts/version-manager.sh<span class="w"> </span>major
+
+<span class="c1"># Définir une version spécifique</span>
+./scripts/version-manager.sh<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="m">2</span>.0.0
+
+<span class="c1"># Aide</span>
+./scripts/version-manager.sh<span class="w"> </span><span class="nb">help</span>
+</code></pre></div>
+<h2 id="specificites-par-plateforme">📱 Spécificités par plateforme</h2>
+<h3 id="android">Android</h3>
+<ul>
+<li>✅ <strong>Build number auto-incrémenté</strong> par GitHub Actions</li>
+<li>Format version dans <code>pubspec.yaml</code>: <code>1.0.8+24</code></li>
+<li>Version code (24) doit être unique et croissant</li>
+<li>Version name (1.0.8) visible par les utilisateurs</li>
+</ul>
+<h3 id="ios">iOS</h3>
+<ul>
+<li>Format similaire à Android</li>
+<li>Géré via <code>pubspec.yaml</code></li>
+<li>Build number peut être synchronisé avec Android</li>
+</ul>
+<h3 id="windows-linux-macos">Windows / Linux / macOS</h3>
+<ul>
+<li>Format similaire</li>
+<li>Géré via <code>pubspec.yaml</code></li>
+<li>Pas de contrainte stricte sur le build number</li>
+</ul>
+<h3 id="web-pwa">Web (PWA)</h3>
+<ul>
+<li>Version visible dans le manifest</li>
+<li>Peut suivre la même version que mobile</li>
+</ul>
+<h2 id="en-cas-de-probleme">📞 En cas de problème</h2>
+<h3 id="version-code-already-exists-sur-play-store">"Version code already exists" sur Play Store</h3>
+<p><strong>Cause</strong>: Le build number existe déjà sur le Play Store</p>
+<p><strong>Solution</strong>: Le workflow l'incrémente automatiquement maintenant. Si le problème persiste :
+<div class="highlight"><pre><span></span><code>./scripts/version-manager.sh<span class="w"> </span>build
+git<span class="w"> </span>add<span class="w"> </span>pubspec.yaml
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;🔢 Increment build number&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div></p>
+<h3 id="conflit-de-version-entre-developpeurs">Conflit de version entre développeurs</h3>
+<p><strong>Cause</strong>: Deux développeurs ont incrémenté la version en parallèle</p>
+<p><strong>Solution</strong>:
+1. Le premier merge gagne
+2. Le second doit rebaser et adapter sa version
+3. Coordination via Slack/Discord avant d'incrémenter</p>
+<h3 id="build-number-desynchronise">Build number désynchronisé</h3>
+<p><strong>Cause</strong>: Modification manuelle du build number</p>
+<p><strong>Solution</strong>: Laisser le CI/CD auto-incrémenter. Si vraiment nécessaire :
+<div class="highlight"><pre><span></span><code><span class="c1"># Récupérer le dernier build number du Play Store</span>
+<span class="c1"># L&#39;ajouter +1 dans pubspec.yaml</span>
+./scripts/version-manager.sh<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="m">1</span>.0.8<span class="w"> </span><span class="m">25</span>
+</code></pre></div></p>
+<h2 id="resume">🎉 Résumé</h2>
+<ul>
+<li><strong>Version MAJOR.MINOR.PATCH</strong> : Géré manuellement par les développeurs</li>
+<li><strong>Build number</strong> : Auto-incrémenté par CI/CD pour Android</li>
+<li><strong>Script <code>version-manager.sh</code></strong> : Facilite la gestion manuelle</li>
+<li><strong>Workflow GitHub Actions</strong> : Gère automatiquement le build number Android</li>
+</ul>
+<p><strong>Pour déployer</strong> : Il suffit de lancer le workflow GitHub Actions. Le reste est automatique ! 🚀</p>
+<h2 id="gestion-des-notes-de-version-whatsnew">📝 Gestion des notes de version (WhatsNew)</h2>
+<h3 id="structure-des-fichiers-whatsnew">Structure des fichiers WhatsNew</h3>
+<p>Le dossier <code>distribution/whatsnew/</code> contient deux types de fichiers :</p>
+<h4 id="1-fichiers-de-traduction-multilingue-whatsnew-xx">1. Fichiers de traduction multilingue (whatsnew-xx)</h4>
+<ul>
+<li><strong>whatsnew-fr</strong> : Version française des nouveautés</li>
+<li><strong>whatsnew-en</strong> : Version anglaise  </li>
+<li><strong>whatsnew-es</strong> : Version espagnole</li>
+<li><strong>whatsnew-de</strong> : Version allemande</li>
+<li><strong>whatsnew-ar</strong> : Version arabe</li>
+</ul>
+<p>Ces fichiers sont <strong>utilisés par l'application</strong> pour afficher les nouveautés aux clients selon leur langue. Ils doivent toujours contenir les informations de la dernière version publiée.</p>
+<h4 id="2-fichiers-de-suivi-par-version-whatsnew-xxx">2. Fichiers de suivi par version (whatsnew-x.x.x)</h4>
+<ul>
+<li><strong>whatsnew-1.0.21</strong>, <strong>whatsnew-1.0.22</strong>, <strong>whatsnew-1.0.23</strong>, etc.</li>
+</ul>
+<p>Ces fichiers permettent d'avoir un <strong>historique complet</strong> de ce qui a été ajouté à chaque version. Ils servent de référence pour le suivi des évolutions au fur et à mesure du développement.</p>
+<h3 id="workflow-de-mise-a-jour">Workflow de mise à jour</h3>
+<ol>
+<li><strong>Pendant le développement</strong> : Mettre à jour <code>whatsnew-x.x.x</code> (où x.x.x est la prochaine version) pour suivre les changements en cours</li>
+<li><strong>Au moment de la release</strong> : </li>
+<li>Finaliser le contenu de <code>whatsnew-x.x.x</code></li>
+<li>Copier ce contenu vers tous les fichiers <code>whatsnew-xx</code> (traductions)</li>
+<li>Les fichiers de traduction seront utilisés par l'application pour afficher les nouveautés aux utilisateurs</li>
+</ol>
+<h3 id="exemple-de-workflow">Exemple de workflow</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Début du développement de la version 1.0.24</span>
+<span class="c1"># Éditer distribution/whatsnew/whatsnew-1.0.24 pour suivre les changements</span>
+
+<span class="c1"># Au moment de la release</span>
+cp<span class="w"> </span>distribution/whatsnew/whatsnew-1.0.24<span class="w"> </span>distribution/whatsnew/whatsnew-fr
+<span class="c1"># (puis adapter/traduire pour les autres langues)</span>
+
+<span class="c1"># Commit des changements</span>
+git<span class="w"> </span>add<span class="w"> </span>distribution/whatsnew/
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;📝 Mise à jour des notes de version v1.0.24&quot;</span>
+</code></pre></div>
+<p><strong>Important</strong> : Les fichiers <code>whatsnew-xx</code> doivent être mis à jour <strong>à chaque changement de version</strong> car ils sont lus par l'application pour informer les clients des nouveautés.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

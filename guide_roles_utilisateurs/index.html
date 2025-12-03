@@ -1,0 +1,2215 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation du projet Yinshi (vue via md2html)">
+      
+      
+      
+      
+        <link rel="prev" href="../_sidebar/">
+      
+      
+        <link rel="next" href="../web-deployment-tracking/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Guide des Rôles Utilisateurs - Yin Shi - Yinshi Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guide-des-roles-utilisateurs-yin-shi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yinshi Documentation" class="md-header__button md-logo" aria-label="Yinshi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yinshi Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guide des Rôles Utilisateurs - Yin Shi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yinshi Documentation" class="md-nav__button md-logo" aria-label="Yinshi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yinshi Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation Yinshi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE_AUTH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture d'Authentification - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DIAGNOSTIC_WORKFLOW_APPLE_BUILD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 Rapport Diagnostic Complet - Workflow Apple Build (Run #18686872188)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EMAIL_CONFIGURATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration des Emails - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IMPLEMENTATION_VERIFICATION_EMAIL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implémentation de la Vérification d'Email
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MULTIPLATFORM_COMPATIBILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌐 Compatibilité Multi-Plateforme - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OFFICIAL_RECOMMENDATIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Recommandations Officielles Flutter &amp; Firebase - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PERTE_COMPATIBILITE_ANDROID/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perte de Compatibilité Android - Analyse et Solutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROBLEME_FIRESTORE_EXPLICATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 Problème Firestore - Explication Complète
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROUTE_PROTECTION_EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔐 Évaluation de la Protection des Routes - Étape 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SETUP_GITHUB_ACTIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Configuration GitHub Actions - Guide rapide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TESTING_PROCEDURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Procédure de Test - Vérification d'Email
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VERSIONING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Guide de Versioning - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_sidebar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+     sidebar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide des Rôles Utilisateurs - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide des Rôles Utilisateurs - Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#processus-dinscription-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Processus d'Inscription de l'Utilisateur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Processus d&#39;Inscription de l&#39;Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inscription-via-firebase-ui-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inscription via Firebase UI Auth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creation-automatique-du-profil-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Création Automatique du Profil Utilisateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-verification-email-si-applicable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Vérification Email (si applicable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processus-dabonnement-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Processus d'abonnement de l'Utilisateur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Processus d&#39;abonnement de l&#39;Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-lutilisateur-veut-sabonner-il-valide-les-cgv-pre-paiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand l'utilisateur veut s'abonner, il valide les CGV (Pré-paiement)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quand l&#39;utilisateur veut s&#39;abonner, il valide les CGV (Pré-paiement)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ecran-de-consentement-avant-paiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Écran de consentement avant paiement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tracabilite-du-consentement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Traçabilité du consentement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stockage-legal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Stockage légal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-processus-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Processus complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-preuve-de-consentement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Preuve de consentement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lutilisateur-a-valide-les-cgv-le-paiement-debute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'utilisateur a validé les CGV, le paiement débute :
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processus-de-non-paiement-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏰ Processus de non-paiement de l'Utilisateur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏰ Processus de non-paiement de l&#39;Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-lutilisateur-ne-paye-pas-pendant-sa-periode-dessai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand l'utilisateur ne paye pas pendant sa période d'essai :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quand l&#39;utilisateur ne paye pas pendant sa période d&#39;essai :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-detection-automatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Détection automatique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-declenchement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Déclenchement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-processus-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Processus complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Conséquences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-logique-de-recuperation-cas-exceptionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Logique de récupération (Cas exceptionnel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processus-autres-des-utilisateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Processus autres des Utilisateurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Processus autres des Utilisateurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapes-automatiques-lors-de-chaque-connexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étapes automatiques lors de chaque connexion :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapes-automatiques-lors-de-chaque-deconnexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étapes automatiques lors de chaque deconnexion :
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Constantes Importantes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Flux Complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documents-complementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Documents Complémentaires
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-deployment-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suivi déploiement web (GitHub Actions)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google conundrum
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Google conundrum
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dossier docs/google_conundrum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_FEEDBACK_AND_VISIBILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comment Google voit les tests et les retours utilisateurs (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_PRODUCTION_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist – Accès à la production Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_PRODUCTION_RAPPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rapport – Problème d’accès à la production Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_PRODUCTION_STRATEGIE_AGILE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stratégie agile – Accès à la production Google Play pour Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_TESTERS_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide testeurs – Campagne de test fermé Google Play (Yin Shi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_TESTERS_INVITATION_TEMPLATES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates de messages d’invitation – Test fermé Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google_conundrum/GOOGLE_PLAY_TEST_TRACKING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suivi de la campagne de test fermé – Yin Shi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pwa ameliore
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pwa ameliore
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwa_ameliore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PWA Yin Shi – Mise à jour fiabilisée &amp; site de test DreamHost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stripe compliance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stripe compliance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/ARCHITECTURE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Stripe - Design Technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/AUDIT_CONFORMITE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audit de Conformité Stripe - Yinshi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/BACKLOG_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog Stripe - Gestion des Abonnements &amp; Authentification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/CHECKLIST_SECURITE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist Sécurité - Stripe &amp; Authentification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/GESTION_AVANCEE_STRIPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion Avancée Stripe - Guide Complet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/PLANNING_MISE_A_JOUR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise à Jour du Planning Stripe Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/REMBOURSEMENTS_ET_ANNULATIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Remboursements &amp; Annulations - Guide Complet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/RESSOURCES_OFFICIELLES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources Officielles - Conformité &amp; Sécurité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/SPRINT_PLANNING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint Planning - Gestion des Abonnements Stripe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stripe_compliance/START_HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 START HERE - Guide de Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#processus-dinscription-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Processus d'Inscription de l'Utilisateur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Processus d&#39;Inscription de l&#39;Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inscription-via-firebase-ui-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inscription via Firebase UI Auth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creation-automatique-du-profil-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Création Automatique du Profil Utilisateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-verification-email-si-applicable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Vérification Email (si applicable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processus-dabonnement-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Processus d'abonnement de l'Utilisateur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Processus d&#39;abonnement de l&#39;Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-lutilisateur-veut-sabonner-il-valide-les-cgv-pre-paiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand l'utilisateur veut s'abonner, il valide les CGV (Pré-paiement)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quand l&#39;utilisateur veut s&#39;abonner, il valide les CGV (Pré-paiement)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ecran-de-consentement-avant-paiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Écran de consentement avant paiement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tracabilite-du-consentement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Traçabilité du consentement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stockage-legal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Stockage légal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-processus-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Processus complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-preuve-de-consentement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Preuve de consentement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lutilisateur-a-valide-les-cgv-le-paiement-debute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'utilisateur a validé les CGV, le paiement débute :
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processus-de-non-paiement-de-lutilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏰ Processus de non-paiement de l'Utilisateur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏰ Processus de non-paiement de l&#39;Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quand-lutilisateur-ne-paye-pas-pendant-sa-periode-dessai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quand l'utilisateur ne paye pas pendant sa période d'essai :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quand l&#39;utilisateur ne paye pas pendant sa période d&#39;essai :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-detection-automatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Détection automatique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-declenchement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Déclenchement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-processus-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Processus complet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Conséquences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-logique-de-recuperation-cas-exceptionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Logique de récupération (Cas exceptionnel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processus-autres-des-utilisateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Processus autres des Utilisateurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Processus autres des Utilisateurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapes-automatiques-lors-de-chaque-connexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étapes automatiques lors de chaque connexion :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapes-automatiques-lors-de-chaque-deconnexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étapes automatiques lors de chaque deconnexion :
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Constantes Importantes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-complet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Flux Complet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documents-complementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Documents Complémentaires
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guide-des-roles-utilisateurs-yin-shi">Guide des Rôles Utilisateurs - Yin Shi</h1>
+<p><strong>Date</strong> : 24 novembre 2025<br />
+<strong>Statut</strong> : Documentation active<br />
+<strong>Propriétaire</strong> : Équipe Dev</p>
+<hr />
+<h2 id="processus-dinscription-de-lutilisateur">📋 Processus d'Inscription de l'Utilisateur</h2>
+<p>À l'issue de son inscription, l'utilisateur a accès à une période d'essaie de 30 jours avec l'accès à toutes les fonctionnalités payantes.</p>
+<h3 id="1-inscription-via-firebase-ui-auth">1. Inscription via Firebase UI Auth</h3>
+<ul>
+<li>L'utilisateur s'inscrit via Firebase UI Auth (email/mot de passe, Google, Apple)</li>
+<li>Le système détecte automatiquement la nouvelle connexion</li>
+</ul>
+<h3 id="2-creation-automatique-du-profil-utilisateur">2. Création Automatique du Profil Utilisateur</h3>
+<p>Le système crée automatiquement un profil utilisateur dans la base de données lors de la première connexion avec :
+- <strong>Rôle défini</strong> : Trial
+- <strong>Date de fin d'essai</strong> : date actuelle + 30 jours
+- <strong>Langue par défaut</strong> : français
+- <strong>Champs profil</strong> : initialisés avec valeurs vides (à compléter par l'utilisateur)</p>
+<h3 id="3-verification-email-si-applicable">3. Vérification Email (si applicable)</h3>
+<p>Pour les comptes email/mot de passe :
+- Vérifie si c'est un compte email/mot de passe
+- Envoie automatiquement un email de vérification
+- Continue même si l'envoi échoue (ne bloque pas l'inscription)</p>
+<hr />
+<h2 id="processus-dabonnement-de-lutilisateur">📝 Processus d'abonnement de l'Utilisateur</h2>
+<h3 id="quand-lutilisateur-veut-sabonner-il-valide-les-cgv-pre-paiement">Quand l'utilisateur veut s'abonner, il valide les CGV (Pré-paiement)</h3>
+<h4 id="1-ecran-de-consentement-avant-paiement">1. Écran de consentement avant paiement</h4>
+<p>L'utilisateur doit cocher une case pour accepter :
+- <strong>Conditions Générales de Vente</strong> (CGV Yin Shi)
+- <strong>Politique de Confidentialité</strong> </p>
+<h4 id="2-tracabilite-du-consentement">2. Traçabilité du consentement</h4>
+<p>Le système enregistre automatiquement :
+- <strong>Date et heure</strong> de la validation
+- <strong>Adresse IP</strong> de l'utilisateur
+- <strong>Version des CGV</strong> acceptées
+- <strong>Méthode de validation</strong> (case à cocher)</p>
+<h4 id="3-stockage-legal">3. Stockage légal</h4>
+<p>Les informations sont conservées dans :
+- <strong>Base de données</strong> : <code>consent_records</code> collection
+- <strong>Durée de conservation</strong> : 5 ans (conformité légale)
+- <strong>Accès</strong> : Seul l'administrateur peut consulter</p>
+<h4 id="4-processus-complet">4. Processus complet</h4>
+<div class="highlight"><pre><span></span><code>Demande d&#39;abonnement → Affichage CGV → Case à cocher → Enregistrement → Session Stripe s&#39;ouvre
+</code></pre></div>
+<h4 id="5-preuve-de-consentement">5. Preuve de consentement</h4>
+<p>En cas de litige, le système peut fournir :
+- <strong>Timestamp précis</strong> de l'acceptation
+- <strong>Version exacte</strong> des CGV à ce moment
+- <strong>Preuve technique</strong> (IP, device, session)</p>
+<h3 id="lutilisateur-a-valide-les-cgv-le-paiement-debute">L'utilisateur a validé les CGV, le paiement débute :</h3>
+<hr />
+<h2 id="processus-de-non-paiement-de-lutilisateur">⏰ Processus de non-paiement de l'Utilisateur</h2>
+<h3 id="quand-lutilisateur-ne-paye-pas-pendant-sa-periode-dessai">Quand l'utilisateur ne paye pas pendant sa période d'essai :</h3>
+<h4 id="1-detection-automatique">1. Détection automatique</h4>
+<p>Le système vérifie automatiquement si la période d'essai est terminée chaque fois que l'utilisateur se connecte. Il compare la date actuelle avec la date de fin d'essai.</p>
+<h4 id="2-declenchement">2. Déclenchement</h4>
+<ul>
+<li><strong>À chaque connexion</strong> : Le système vérifie automatiquement le statut</li>
+<li><strong>Vérification quotidienne</strong> : Comparaison entre la date du jour et la fin de l'essai</li>
+</ul>
+<h4 id="3-processus-complet">3. Processus complet</h4>
+<div class="highlight"><pre><span></span><code>Jour 1-30 : Rôle = Trial (accès complet)
+Jour 31 : Connexion → trialEndDate dépassée → Rôle = Expired
+</code></pre></div>
+<h4 id="4-consequences">4. Conséquences</h4>
+<ul>
+<li>✅ <strong>Mise à jour automatique</strong> du rôle dans Firestore</li>
+<li>✅ <strong>Perte d'accès</strong> aux fonctionnalités premium</li>
+<li>✅ <strong>Affichage</strong> du message "Votre essai est terminé"</li>
+</ul>
+<h4 id="5-logique-de-recuperation-cas-exceptionnel">5. Logique de récupération (Cas exceptionnel)</h4>
+<p>Si un utilisateur est marqué comme "Expired" mais que sa période d'essai n'est pas vraiment terminée (erreur de date), le système le réactive automatiquement en "Trial" lors de sa connexion.</p>
+<hr />
+<h2 id="processus-autres-des-utilisateurs">🔄 Processus autres des Utilisateurs</h2>
+<h3 id="etapes-automatiques-lors-de-chaque-connexion">Étapes automatiques lors de chaque connexion :</h3>
+<ol>
+<li><strong>Vérifie si le compte existe</strong> dans Firestore</li>
+<li><strong>Met à jour <code>lastLoginDate</code></strong> avec timestamp actuel</li>
+<li><strong>Ajoute un enregistrement</strong> à l'historique des connexions</li>
+<li><strong>Vérifie le statut de l'essai</strong> automatiquement</li>
+</ol>
+<h3 id="etapes-automatiques-lors-de-chaque-deconnexion">Étapes automatiques lors de chaque deconnexion :</h3>
+<ol>
+<li><strong>Met à jour <code>lastLogoutDate</code></strong> avec timestamp actuel</li>
+<li><strong>Ajoute un enregistrement</strong> à l'historique des deconnexions</li>
+</ol>
+<hr />
+<h2 id="constantes-importantes">🎯 Constantes Importantes</h2>
+<table>
+<thead>
+<tr>
+<th>Constante</th>
+<th>Valeur</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Durée d'essai</strong></td>
+<td>30 jours</td>
+<td>Période d'essai automatique</td>
+</tr>
+<tr>
+<td><strong>Rôle par défaut</strong></td>
+<td>Trial</td>
+<td>Attribution automatique à l'inscription</td>
+</tr>
+<tr>
+<td><strong>Base de données</strong></td>
+<td>app_users</td>
+<td>Stockage des profils utilisateurs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="flux-complet">📊 Flux Complet</h2>
+<div class="highlight"><pre><span></span><code>Accès gratuit → Inscription → Authentification → Création Profil → Rôle Trial (30j) → Connexion → Vérification statut → Accès complet → Validation CGV → Paiement → Rôle Paid → Accès complet → Expired (si non-paiement après période d&#39;essai) → Accès gratuit
+</code></pre></div>
+<hr />
+<h2 id="documents-complementaires">🔗 Documents Complémentaires</h2>
+<ul>
+<li><strong>Architecture complète</strong> : <code>docs/stripe_compliance/ARCHITECTURE_STRIPE.md</code></li>
+<li><strong>Architecture auth</strong> : <code>docs/ARCHITECTURE_AUTH.md</code></li>
+<li><strong>Code source</strong> : <code>lib/providers/auth_provider.dart</code>, <code>lib/services/user_service.dart</code></li>
+</ul>
+<hr />
+<p><strong>Document créé pour synthétiser le processus des rôles utilisateurs</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

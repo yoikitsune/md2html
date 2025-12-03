@@ -1,0 +1,324 @@
+X-UIDL: GmailId19a9dbb98860cc0b
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Delivered-To: yoikitsune@gmail.com
+Received: by 2002:a05:6a11:cd0b:b0:67c:b5ea:8b24 with SMTP id pe11csp489999pxc;
+        Wed, 19 Nov 2025 12:08:28 -0800 (PST)
+X-Received: by 2002:a05:6512:3a86:b0:592:ed6f:9a59 with SMTP id 2adb3069b0e04-5969dbd7ac5mr121838e87.2.1763582908667;
+        Wed, 19 Nov 2025 12:08:28 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763582908; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ixjlkHNEw+FfRLbh3GFlBBEPwRNOgPdppz+cQxxALJ65gaTkG6fU4RFo2CcUFe1bXF
+         dTi2kUhzC7Blpm2tYaV/3S2a8l3+k5ZvWwC0w5QXaiTvyiBEeEI9r5t2r3E1IuGo9e1A
+         HqfLhAaKid3N63KjYtjW1BfwkZItjbXxtZat+PBDE3wMM62ZjJ5nPmk5dFGZDnHVKqZ9
+         NfqRNZbEfE5nKSaAD9QOpBIePXkifroRdOaY6eV36C09HFfy8WK+9CpTYgUzhlSUIzCS
+         YWUpXRo3kVbz4mISjO6TIfEDK9zM05njfJdrtecrdkoW8cNUgWjxfBtqep4lYGigi2H5
+         MSoA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=joQl9uzqeB7/15538IhyZZP1UsGQdloHsmTLAn2Khu4=;
+        fh=ENTXkS4ejU9lkoHCvFlXLL042v7mf25GfKT2rZ8ct9U=;
+        b=F2MD5oHpYH/cMlvHN88P4+/T+9g6BVpmoLgdVBCixDaBx4Q+cU0fA5iWdCeprjcw+O
+         s4SK9+qpmoqlszmwbOZqVB8irs/9Snf5tfOtUQ2bdykvmvBXBaPcw0Xu7zbRCLjNlqN6
+         Vt7r6yLSj22XAO/3JRkTesgBGnRhrPUHULrEHoZW+fbx0AOpIf5QI9UCnhrwunlIuFl0
+         CcY4DETy/x71k2ZFmbj8yCbnSnLx18yFKpPIg9bpqRTNOwZmuc3HasbkqnjypLCGnxCL
+         FfUHik85gxaj04Xzhd2n7cQhcZM7vcV2FpPy79Ad+Xc+sHZ5BRBNg24s4tNb7jHDTobd
+         NKcQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=gv9BQIw6;
+       spf=pass (google.com: domain of ludofar@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=ludofar@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <ludofar@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 2adb3069b0e04-5959dc081dbsor479542e87.0.2025.11.19.12.08.28
+        for <yoikitsune@gmail.com>
+        (Google Transport Security);
+        Wed, 19 Nov 2025 12:08:28 -0800 (PST)
+Received-SPF: pass (google.com: domain of ludofar@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=gv9BQIw6;
+       spf=pass (google.com: domain of ludofar@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=ludofar@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1763582907; x=1764187707; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=joQl9uzqeB7/15538IhyZZP1UsGQdloHsmTLAn2Khu4=;
+        b=gv9BQIw6vI9k9g5gO/mKPy04Rj8WZndw0rMNWrILb9L6+oIG1CVwIpDTlRnsY8brlT
+         Ii97CqUnC93+41U/tWg7ksGyuLLv4OykeLXNV/dlI7/LLlM/ooHxzlZxzeD1/6PI9Pv2
+         3mUKqRGBXLLAopjNFLxwxsce1uF7rMTjqM17MXmAHl9YYCLjwr8DTIJ1i48TOWNh/uAV
+         un5qwMgBLBHUxiCAT7TTgGTXL0U6pJH7Niifrf1ifcPvyyVOH+pYK5ieCWxaU4pbxcig
+         WK/2u5RKW27igAuMwMbc4yyYcNn5YoU7L8szMMbAUbiWFSHUqHwZDrEyVqC0n+puYWDF
+         T61A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763582907; x=1764187707;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=joQl9uzqeB7/15538IhyZZP1UsGQdloHsmTLAn2Khu4=;
+        b=AtQeDIMLIjBY+w1a9G8iYvgLnHQscABL3bYvD3zWGF9gCy4IK8iGMy3d/U61/6DpbM
+         YTp3gewDqs9zzuGi2vZ6EIKr5cvlldMaMjBFMXYmfxN/jv77rvUFXgvPKGvinbZ3Mdg+
+         hYuGBl0CF5Jz8qMRYSi2QRfDoEVmLqVXIcQH1IsIESkDAvM78+oFBe0XNiE/uY0MpPOH
+         mpG6wv1dCmrW1HudNh7U2v/OFO/b0cBBFz3oNtJ2JekRXURoUO1YXZFPIzHaYnix9ySt
+         OUbONTFX6cYd07Bg+moFpgLJeTFUUIevEKFiT+u/mHPw7Zgm6/RRsIJ34KE0rFOpUOYt
+         Xr1A==
+X-Gm-Message-State: AOJu0Yw72kraLZSs0dFerfGh3PykLq2EKdj6QX8QHpwaVJxWTTbN6Ik5
+	0wG4X3pL04zd1lMKChwaN1vApz6Z4amGdHwV79+LffZIF14dL/EzpVF9AQUq3GqnJz9hJONo2g0
+	0JoS86UOPUJLRVYvE3UATtSBhOi5h210afe2M
+X-Gm-Gg: ASbGnctkH1GTxC0fFEagKQpzYXpDO7QM8MXkWu38p8IMW3fEtY0ES7BvXt9PKltJhEj
+	C3uD7mdHotRlQmyuEOFBnxuPjovUObBfZNLgp4eSFj88jXhyjfM3bZpnc8aIsHcmPsS8He0QaJ9
+	3IYtjWQA2o3kfhxgJhSmx03ViizXKz3pdkVzF7odjXo1EaGcOOqxJzrFfr8kpRuPzjZOlRuctuL
+	C1PD7zY8Tdfdn3L41SdfHhnSARuKpybSSAvS5JKYxlT3Gotwp97LYXsS7Jm5SHlPJVgSGGUexnl
+	63Wq+bwa
+X-Google-Smtp-Source: AGHT+IEp4m8yIxL/la+gFiN4hqzEPls/EaBYopAKiF5Ci7uxEuctOfzhUm+EPvdisGJchi0MjbTKQmXFHTMnb3/Zk0E=
+X-Received: by 2002:a05:6512:1390:b0:594:2d64:bce9 with SMTP id
+ 2adb3069b0e04-5969dbd7a09mr122621e87.4.1763582907036; Wed, 19 Nov 2025
+ 12:08:27 -0800 (PST)
+MIME-Version: 1.0
+References: <76e724cb2885a23efb3e37328422ecf6d86212c3-20097810-110619858@google.com>
+In-Reply-To: <76e724cb2885a23efb3e37328422ecf6d86212c3-20097810-110619858@google.com>
+From: Ludovic Dumay <ludofar@gmail.com>
+Date: Wed, 19 Nov 2025 21:07:49 +0100
+X-Gm-Features: AWmQ_bkcZkiBQ5ubpnzBIv7yYAB1cA0MjnhpdL0pbrneQnoCSrEf_KQ1BpZ9ItI
+Message-ID: <CAK4nxGZJ=3pS4zomeBoXqGiobjeEPke_u25Z6WX6JV2zVb-ndg@mail.gmail.com>
+Subject: Fwd: More testing required to access Google Play production
+To: Julien Poveda <yoikitsune@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000b4ba300643f8246d"
+
+--000000000000b4ba300643f8246d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+De : Google Play Support <no-reply-googleplay-developer@google.com>
+Date: mer. 19 nov. 2025 =C3=A0 21:04
+Subject: More testing required to access Google Play production
+To: <ludofar@gmail.com>
+Cc: <ludofar@gmail.com>
+
+
+[image: Google Play Console]
+
+[image: Critical message]More testing required to access Google Play
+production
+
+We reviewed your application, and determined that your app requires more
+testing before you can access production.
+
+Possible reasons why your production access could not be granted include:
+
+   - Testers were not engaged with your app during your closed test
+   - You didn't follow testing best practices, which may include gathering
+   and acting on user feedback through updates to your app
+
+Before applying again, test your app using closed testing for an additional
+14 days with real testers.
+
+For a full list of reasons, and to learn more about what we're looking for
+when evaluating apps for production, view the guidance
+<https://c.gle/APy2Ad2qHK5Jdu-rx4g23M12J9qsy-2qJXdJsPrvqVkAyfK6glXk8a4HVPY4=
+AStt9Gzyd20VFB57DJpOz45-6EgWga6Rt_UFM-IXczXGk8GL7a5yHFCewYgpBY0hHNPiAqhq73O=
+_VjvfK-EjehrJN4G8opIEmPwJtFQpgtyyH2z6JlC_k1M>
+.
+Go to App dashboard
+<https://c.gle/APy2Ad1teYvZ8aq21EE0TnnCqNbFGI8FYZwz6suyadjVOXg4s09spI4WBUQJ=
+cQalswG-x43wvwQUxlQ4AUanQanYLAAZgR6koZiryjkvbM88XFYaYfJ9rqmTANaxDWkMeq8uy48=
+MzzRZ4wwi9aYn85HJsCL23WySDaZb1QobLKh5eJ_q6XpH7lGfnb215g0FukaIZJfCSRjw7jjhgx=
+OvrPca>
+Thank you,
+The Google Play Console Team
+Connect with us
+[image: Play Console resource guides]
+<https://c.gle/APy2Ad1CtASElZ24hAZp4vbzFYvxT2Oi-BMMRapls3wpa9NLjIk9Lenmndte=
+C7GZcTiHG8cz4zkn86Bj7NXiR32kdu7AN8hp1X1lSeSMYzj4FqDIgQKjSnv29tjx8nNGHiQX5HQ=
+>
+[image:
+Play Academy]
+<https://c.gle/APy2Ad0xtoYrQz-P_IFu-j2fuqHngF4Ag26hyWTD8Q8CQqNaH3yE0WqRG3QP=
+2_mxTgPDWxV1RhqEgOiE3W-2ejYF7FJzHMa-C7MV6ZeGNbq2Qv3Oj93zIudRenT49tU>
+[image:
+Help Center]
+<https://c.gle/APy2Ad1ApvbVUcjteGLgcuff5Jq4NQecT2EF9Uhmp7tRygfdRGPHH4M2e8mc=
+8p059vH9SEuWGGhjzkADs9W9FPzEVrq047yp5MqNdqkcLKweRUSttz20uiqphSNSaE_SF8T9oOB=
+4AfCbAwpN8LKKNu-hFShn85w>
+[image:
+Newsletter]
+<https://c.gle/APy2Ad0zQwQ3FfmxxppjGjFxtcgONdgb_FZdVHHSMtt7CnmLrQ4hCZT92h3W=
+0eXvgKSuGd5_CS9lFhrIjzOUxRRnzlY7liuk5rZB4NKff8V84TFphPtRjgZ4WZYPl5wE9CIxZDw=
+8Qg>
+LANG=3Den|MODE=3DA|REG=3DFR|TID=3DSW
+
+=C2=A9 2025 Google Commerce Ltd, Gordon House, Barrow Street, Dublin 4
+
+Click here
+<https://c.gle/APy2Ad2Fs0FR99f2ndgPzY-s9UJFNmsTgzBtuCZtmkqVH85p8TX7WqhdT_oz=
+d0mli0yHM91Gt8HkuOUCZiRGmrpQx-GRMLEuPqpjtlQ6vE6P69ujFqI9YdmCuNQgtmstooAdy-2=
+nH-CpKTDrHmLRQGXgeaYyUPadbYSul0CDH5B6oP6PwAW_bMo>
+to configure your notification preferences.
+
+This message was sent to inform you about important updates to your Google
+Play developer account.
+
+--000000000000b4ba300643f8246d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:georgia,=
+serif;font-size:large;color:#444444"><br></div><br><div class=3D"gmail_quot=
+e gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_attr">---------- F=
+orwarded message ---------<br>De=C2=A0: <strong class=3D"gmail_sendername" =
+dir=3D"auto">Google Play Support</strong> <span dir=3D"auto">&lt;<a href=3D=
+"mailto:no-reply-googleplay-developer@google.com">no-reply-googleplay-devel=
+oper@google.com</a>&gt;</span><br>Date: mer. 19 nov. 2025 =C3=A0=C2=A021:04=
+<br>Subject: More testing required to access Google Play production<br>To: =
+ &lt;<a href=3D"mailto:ludofar@gmail.com">ludofar@gmail.com</a>&gt;<br>Cc: =
+ &lt;<a href=3D"mailto:ludofar@gmail.com">ludofar@gmail.com</a>&gt;<br></di=
+v><br><br><div class=3D"msg-293994790460470403"><div><div class=3D"m_-29399=
+4790460470403mokka-email">
+  <table style=3D"margin:0;width:100%">
+    <tbody>
+      <tr>
+        <td style=3D"height:70px">
+        <table style=3D"margin:0 auto;max-width:800px;width:100%">
+          <tbody>
+            <tr>
+              <td>
+              <div style=3D"float:left;vertical-align:middle;padding-left:4=
+px"><img alt=3D"Google Play Console" height=3D"64" src=3D"https://play.goog=
+le.com/console/static/messaging/email/play-console-logo-2023-2x.png" title=
+=3D"Google Play Console"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td style=3D"background:#f5f5f5;border-collapse:collapse;min-height=
+:24px;height:24px;width:100%">
+        <div>=C2=A0</div>
+        </td>
+      </tr>
+      <tr>
+        <td style=3D"padding-left:20px">
+        <table align=3D"center" style=3D"margin:0 auto;max-width:800px;widt=
+h:100%">
+          <tbody>
+            <tr>
+              <td><div style=3D"display:flex;margin-top:20px"><img alt=3D"C=
+ritical message" height=3D"24" src=3D"https://play.google.com/console/stati=
+c/messaging/email/treatments/critical_24dp.png" title=3D"Critical message">=
+<span style=3D"font-weight:500;font-size:22px;line-height:24px;margin-left:=
+8px">More testing required to access Google Play production</span></div><p>=
+We reviewed your application, and determined that your app requires more te=
+sting before you can access production.</p>
+
+<p>Possible reasons why your production access could not be granted include=
+:</p>
+
+<ul style=3D"margin-top:0;margin-bottom:0">
+  <li>Testers were not engaged with your app during your closed test</li>
+  <li>You didn&#39;t follow testing best practices, which may include gathe=
+ring and acting on user feedback through updates to your app</li>
+</ul>
+
+<p>Before applying again, test your app using closed testing for an additio=
+nal 14 days with real testers.</p>
+
+<p>For a full list of reasons, and to learn more about what we&#39;re looki=
+ng for when evaluating apps for production, <a rel=3D"noopener" style=3D"te=
+xt-decoration:none;color:#448aff" href=3D"https://c.gle/APy2Ad2qHK5Jdu-rx4g=
+23M12J9qsy-2qJXdJsPrvqVkAyfK6glXk8a4HVPY4AStt9Gzyd20VFB57DJpOz45-6EgWga6Rt_=
+UFM-IXczXGk8GL7a5yHFCewYgpBY0hHNPiAqhq73O_VjvfK-EjehrJN4G8opIEmPwJtFQpgtyyH=
+2z6JlC_k1M" target=3D"_blank">view the guidance</a>.</p></td>
+            </tr>
+            <tr>
+              <td><h3 style=3D"font-weight:400"><a rel=3D"noopener" style=
+=3D"text-decoration:none" href=3D"https://c.gle/APy2Ad1teYvZ8aq21EE0TnnCqNb=
+FGI8FYZwz6suyadjVOXg4s09spI4WBUQJcQalswG-x43wvwQUxlQ4AUanQanYLAAZgR6koZiryj=
+kvbM88XFYaYfJ9rqmTANaxDWkMeq8uy48MzzRZ4wwi9aYn85HJsCL23WySDaZb1QobLKh5eJ_q6=
+XpH7lGfnb215g0FukaIZJfCSRjw7jjhgxOvrPca" target=3D"_blank"><span style=3D"b=
+ackground-color:#1a73e8;padding:8px 16px;border-radius:4px;color:#fff">Go t=
+o App dashboard</span></a></h3>
+<br>
+<div>Thank you,</div>
+
+<h3 style=3D"font-weight:400">The Google Play Console Team</h3>
+
+<div>Connect with us</div></td>
+            </tr>
+            <tr>
+              <td style=3D"padding:8px 0">
+              <table>
+                <tbody>
+                  <tr>
+                    <td style=3D"padding:0"><a rel=3D"noopener" style=3D"ma=
+rgin-right:12px" href=3D"https://c.gle/APy2Ad1CtASElZ24hAZp4vbzFYvxT2Oi-BMM=
+Rapls3wpa9NLjIk9LenmndteC7GZcTiHG8cz4zkn86Bj7NXiR32kdu7AN8hp1X1lSeSMYzj4FqD=
+IgQKjSnv29tjx8nNGHiQX5HQ" target=3D"_blank"><img alt=3D"Play Console resour=
+ce guides" src=3D"https://play.google.com/console/static/messaging/email/re=
+source-guides-icon-3x.png" style=3D"height:28px"></a></td>
+                    <td style=3D"padding:0"><a rel=3D"noopener" style=3D"ma=
+rgin-right:12px" href=3D"https://c.gle/APy2Ad0xtoYrQz-P_IFu-j2fuqHngF4Ag26h=
+yWTD8Q8CQqNaH3yE0WqRG3QP2_mxTgPDWxV1RhqEgOiE3W-2ejYF7FJzHMa-C7MV6ZeGNbq2Qv3=
+Oj93zIudRenT49tU" target=3D"_blank"><img alt=3D"Play Academy" src=3D"https:=
+//play.google.com/console/static/messaging/email/play-academy-icon-3x.png" =
+style=3D"height:28px"></a></td>
+                    <td style=3D"padding:0"><a rel=3D"noopener" style=3D"ma=
+rgin-right:12px" href=3D"https://c.gle/APy2Ad1ApvbVUcjteGLgcuff5Jq4NQecT2EF=
+9Uhmp7tRygfdRGPHH4M2e8mc8p059vH9SEuWGGhjzkADs9W9FPzEVrq047yp5MqNdqkcLKweRUS=
+ttz20uiqphSNSaE_SF8T9oOB4AfCbAwpN8LKKNu-hFShn85w" target=3D"_blank"><img al=
+t=3D"Help Center" src=3D"https://play.google.com/console/static/messaging/e=
+mail/help-center-icon-3x.png" style=3D"height:28px"></a></td>
+                    <td style=3D"padding:0"><a rel=3D"noopener" style=3D"ma=
+rgin-right:12px" href=3D"https://c.gle/APy2Ad0zQwQ3FfmxxppjGjFxtcgONdgb_FZd=
+VHHSMtt7CnmLrQ4hCZT92h3W0eXvgKSuGd5_CS9lFhrIjzOUxRRnzlY7liuk5rZB4NKff8V84TF=
+phPtRjgZ4WZYPl5wE9CIxZDw8Qg" target=3D"_blank"><img alt=3D"Newsletter" src=
+=3D"https://play.google.com/console/static/messaging/email/newsletter-icon-=
+3x.png" style=3D"height:28px"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+              </td>
+            </tr>
+            <tr>
+              <td><span style=3D"display:none">LANG=3Den|MODE=3DA|REG=3DFR|=
+TID=3DSW</span></td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td style=3D"background-color:#f5f5f5;text-align:center">
+        <table align=3D"center" style=3D"margin:0 auto;max-width:800px;widt=
+h:100%">
+          <tbody>
+            <tr>
+              <td style=3D"background-color:#f5f5f5;color:#777;font-size:12=
+px;line-height:16px;padding:15px 25px;text-align:center">
+              <p>=C2=A9 2025 Google Commerce Ltd, Gordon House, Barrow Stre=
+et, Dublin 4</p>
+              <p>Click <a rel=3D"noopener" style=3D"text-decoration:none;co=
+lor:#448aff" href=3D"https://c.gle/APy2Ad2Fs0FR99f2ndgPzY-s9UJFNmsTgzBtuCZt=
+mkqVH85p8TX7WqhdT_ozd0mli0yHM91Gt8HkuOUCZiRGmrpQx-GRMLEuPqpjtlQ6vE6P69ujFqI=
+9YdmCuNQgtmstooAdy-2nH-CpKTDrHmLRQGXgeaYyUPadbYSul0CDH5B6oP6PwAW_bMo" targe=
+t=3D"_blank">here</a> to configure your notification preferences.</p>
+
+<p>This message was sent to inform you about important updates to your Goog=
+le Play developer account.</p></td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div></div></div></div>
+
+--000000000000b4ba300643f8246d--
