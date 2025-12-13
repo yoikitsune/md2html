@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+
+{% block content %}
+  {% set recent_updates = config.extra.get('recent_updates', []) %}
+  {% if recent_updates is not none %}
+    <div class="md-typeset">
+      <div class="admonition info">
+        <p class="admonition-title">Dernières mises à jour</p>
+        {% if recent_updates %}
+          <ul>
+            {% for it in recent_updates %}
+              <li>
+                <a href="{{ it.url | url }}">{{ it.title | e }}</a>
+                {% if it.date or it.author %}
+                  <span class="md-meta">
+                    {% if it.date %}
+                      — {{ it.date | e }}
+                    {% endif %}
+                    {% if it.author %}
+                      — {{ it.author | e }}
+                    {% endif %}
+                  </span>
+                {% endif %}
+                {% if it.path %}
+                  <br />
+                  <code class="md-meta">/{{ it.path | e }}</code>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="md-meta">Aucune mise à jour détectée.</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {{ super() }}
+{% endblock %}

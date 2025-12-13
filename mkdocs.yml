@@ -5,13 +5,20 @@ site_description: Documentation du projet Yinshi (vue via md2html)
 # sans modifier le repo Yinshi lui-même.
 docs_dir: ../yinshi/docs
 
+hooks:
+  - hooks.py
+
 # Thème Material pour une interface moderne
 theme:
   name: material
-
+  custom_dir: overrides
+  features:
+    - navigation.indexes
 # IMPORTANT : pas de section `nav` -> MkDocs génère la navigation
 # automatiquement à partir de l’arborescence disque.
 markdown_extensions:
+  - admonition
+  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
