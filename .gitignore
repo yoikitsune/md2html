@@ -1,2 +1,5 @@
 .venv/
 site/
+deploy*
+*.code-workspace
+*.yml
